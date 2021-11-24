@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="8" passed="8" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2021-11-24T15:27:56Z" name="Default suite" finished-at="2021-11-24T15:42:33Z" duration-ms="877740">
+    <groups>
+    </groups>
+    <test started-at="2021-11-24T15:27:56Z" name="Default test" finished-at="2021-11-24T15:42:33Z" duration-ms="877740">
+      <class name="com.muDomastic.qa.TestCases.CommercialPortalGenericScenario">
+        <test-method is-config="true" signature="LoginCommercialPortal()[pri:0, instance:com.muDomastic.qa.TestCases.CommercialPortalGenericScenario@432038ec]" started-at="2021-11-24T15:27:56Z" name="LoginCommercialPortal" finished-at="2021-11-24T15:28:16Z" duration-ms="19897" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoginCommercialPortal -->
+        <test-method signature="CommercialPortal_TC_08()[pri:1, instance:com.muDomastic.qa.TestCases.CommercialPortalGenericScenario@432038ec]" started-at="2021-11-24T15:28:16Z" name="CommercialPortal_TC_08" finished-at="2021-11-24T15:30:12Z" duration-ms="116769" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CommercialPortal_TC_08 -->
+        <test-method is-config="true" signature="driverClose()[pri:0, instance:com.muDomastic.qa.TestCases.CommercialPortalGenericScenario@432038ec]" started-at="2021-11-24T15:30:12Z" name="driverClose" finished-at="2021-11-24T15:30:24Z" duration-ms="11471" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- driverClose -->
+        <test-method is-config="true" signature="LoginCommercialPortal()[pri:0, instance:com.muDomastic.qa.TestCases.CommercialPortalGenericScenario@432038ec]" started-at="2021-11-24T15:30:24Z" name="LoginCommercialPortal" finished-at="2021-11-24T15:30:42Z" duration-ms="18011" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoginCommercialPortal -->
+        <test-method signature="CommercialPortal_TC_09()[pri:1, instance:com.muDomastic.qa.TestCases.CommercialPortalGenericScenario@432038ec]" started-at="2021-11-24T15:30:42Z" name="CommercialPortal_TC_09" finished-at="2021-11-24T15:32:52Z" duration-ms="130256" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CommercialPortal_TC_09 -->
+        <test-method is-config="true" signature="driverClose()[pri:0, instance:com.muDomastic.qa.TestCases.CommercialPortalGenericScenario@432038ec]" started-at="2021-11-24T15:32:52Z" name="driverClose" finished-at="2021-11-24T15:33:03Z" duration-ms="11115" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- driverClose -->
+        <test-method is-config="true" signature="LoginCommercialPortal()[pri:0, instance:com.muDomastic.qa.TestCases.CommercialPortalGenericScenario@432038ec]" started-at="2021-11-24T15:33:03Z" name="LoginCommercialPortal" finished-at="2021-11-24T15:33:21Z" duration-ms="18173" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoginCommercialPortal -->
+        <test-method signature="CommercialPortal_TC_01()[pri:2, instance:com.muDomastic.qa.TestCases.CommercialPortalGenericScenario@432038ec]" started-at="2021-11-24T15:33:21Z" name="CommercialPortal_TC_01" finished-at="2021-11-24T15:34:48Z" duration-ms="87082" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CommercialPortal_TC_01 -->
+        <test-method is-config="true" signature="driverClose()[pri:0, instance:com.muDomastic.qa.TestCases.CommercialPortalGenericScenario@432038ec]" started-at="2021-11-24T15:34:48Z" name="driverClose" finished-at="2021-11-24T15:34:59Z" duration-ms="10956" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- driverClose -->
+        <test-method is-config="true" signature="LoginCommercialPortal()[pri:0, instance:com.muDomastic.qa.TestCases.CommercialPortalGenericScenario@432038ec]" started-at="2021-11-24T15:34:59Z" name="LoginCommercialPortal" finished-at="2021-11-24T15:35:17Z" duration-ms="17652" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoginCommercialPortal -->
+        <test-method signature="CommercialPortal_TC_02()[pri:2, instance:com.muDomastic.qa.TestCases.CommercialPortalGenericScenario@432038ec]" started-at="2021-11-24T15:35:17Z" name="CommercialPortal_TC_02" finished-at="2021-11-24T15:36:44Z" duration-ms="87361" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CommercialPortal_TC_02 -->
+        <test-method is-config="true" signature="driverClose()[pri:0, instance:com.muDomastic.qa.TestCases.CommercialPortalGenericScenario@432038ec]" started-at="2021-11-24T15:36:44Z" name="driverClose" finished-at="2021-11-24T15:36:56Z" duration-ms="11070" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- driverClose -->
+        <test-method is-config="true" signature="LoginCommercialPortal()[pri:0, instance:com.muDomastic.qa.TestCases.CommercialPortalGenericScenario@432038ec]" started-at="2021-11-24T15:36:56Z" name="LoginCommercialPortal" finished-at="2021-11-24T15:37:14Z" duration-ms="18514" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoginCommercialPortal -->
+        <test-method signature="CommercialPortal_TC_03()[pri:2, instance:com.muDomastic.qa.TestCases.CommercialPortalGenericScenario@432038ec]" started-at="2021-11-24T15:37:14Z" name="CommercialPortal_TC_03" finished-at="2021-11-24T15:39:22Z" duration-ms="128034" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CommercialPortal_TC_03 -->
+        <test-method is-config="true" signature="driverClose()[pri:0, instance:com.muDomastic.qa.TestCases.CommercialPortalGenericScenario@432038ec]" started-at="2021-11-24T15:39:22Z" name="driverClose" finished-at="2021-11-24T15:39:33Z" duration-ms="10844" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- driverClose -->
+        <test-method is-config="true" signature="LoginCommercialPortal()[pri:0, instance:com.muDomastic.qa.TestCases.CommercialPortalGenericScenario@432038ec]" started-at="2021-11-24T15:39:33Z" name="LoginCommercialPortal" finished-at="2021-11-24T15:39:52Z" duration-ms="18719" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoginCommercialPortal -->
+        <test-method signature="CommercialPortal_TC_05()[pri:2, instance:com.muDomastic.qa.TestCases.CommercialPortalGenericScenario@432038ec]" started-at="2021-11-24T15:39:52Z" name="CommercialPortal_TC_05" finished-at="2021-11-24T15:39:52Z" duration-ms="88" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CommercialPortal_TC_05 -->
+        <test-method is-config="true" signature="driverClose()[pri:0, instance:com.muDomastic.qa.TestCases.CommercialPortalGenericScenario@432038ec]" started-at="2021-11-24T15:39:52Z" name="driverClose" finished-at="2021-11-24T15:40:03Z" duration-ms="11185" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- driverClose -->
+        <test-method is-config="true" signature="LoginCommercialPortal()[pri:0, instance:com.muDomastic.qa.TestCases.CommercialPortalGenericScenario@432038ec]" started-at="2021-11-24T15:40:03Z" name="LoginCommercialPortal" finished-at="2021-11-24T15:40:21Z" duration-ms="17819" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoginCommercialPortal -->
+        <test-method signature="CommercialPortal_TC_06()[pri:2, instance:com.muDomastic.qa.TestCases.CommercialPortalGenericScenario@432038ec]" started-at="2021-11-24T15:40:21Z" name="CommercialPortal_TC_06" finished-at="2021-11-24T15:40:21Z" duration-ms="86" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CommercialPortal_TC_06 -->
+        <test-method is-config="true" signature="driverClose()[pri:0, instance:com.muDomastic.qa.TestCases.CommercialPortalGenericScenario@432038ec]" started-at="2021-11-24T15:40:21Z" name="driverClose" finished-at="2021-11-24T15:40:32Z" duration-ms="11185" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- driverClose -->
+        <test-method is-config="true" signature="LoginCommercialPortal()[pri:0, instance:com.muDomastic.qa.TestCases.CommercialPortalGenericScenario@432038ec]" started-at="2021-11-24T15:40:32Z" name="LoginCommercialPortal" finished-at="2021-11-24T15:40:51Z" duration-ms="19255" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoginCommercialPortal -->
+        <test-method signature="CommercialPortal_TC_07()[pri:2, instance:com.muDomastic.qa.TestCases.CommercialPortalGenericScenario@432038ec]" started-at="2021-11-24T15:40:51Z" name="CommercialPortal_TC_07" finished-at="2021-11-24T15:42:22Z" duration-ms="90544" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CommercialPortal_TC_07 -->
+        <test-method is-config="true" signature="driverClose()[pri:0, instance:com.muDomastic.qa.TestCases.CommercialPortalGenericScenario@432038ec]" started-at="2021-11-24T15:42:22Z" name="driverClose" finished-at="2021-11-24T15:42:33Z" duration-ms="11562" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- driverClose -->
+      </class> <!-- com.muDomastic.qa.TestCases.CommercialPortalGenericScenario -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

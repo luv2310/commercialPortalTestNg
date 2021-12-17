@@ -72,6 +72,10 @@ public class TestBase {
 			if (browserName.equals("chrome"))
 			{
 				System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"\\driver\\chromedriver.exe");
+				DesiredCapabilities caps=DesiredCapabilities.chrome();
+				ChromeOptions options = new ChromeOptions();
+				options.addArguments("-incognito");
+				caps.setCapability(ChromeOptions.CAPABILITY, options);
 				driver = new ChromeDriver();
 				driver.manage().window().maximize();
 				driver.manage().deleteAllCookies();
@@ -88,7 +92,7 @@ public class TestBase {
 				} catch (Exception e) {
 					log.error(":: Exception occured while closing the opera, method name Setup :: "+e.getMessage(),e);			
 				}
-				
+
 				DesiredCapabilities capablities=DesiredCapabilities.opera();
 				String opera_profile = propt.getProperty("opera_profile");
 				String operaBinary =propt.getProperty("operaBinary");

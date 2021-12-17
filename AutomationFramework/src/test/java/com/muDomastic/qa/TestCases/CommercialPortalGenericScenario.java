@@ -7,6 +7,7 @@ import org.testng.annotations.Test;
 import com.muDomastic.qa.base.TestBase;
 import com.muDomastic.qa.page.CP_Login_Page;
 import com.muDomastic.qa.page.CP_TC_1;
+import com.muDomastic.qa.page.CP_TC_10;
 import com.muDomastic.qa.page.CP_TC_2;
 import com.muDomastic.qa.page.CP_TC_3;
 import com.muDomastic.qa.page.CP_TC_5;
@@ -72,6 +73,15 @@ public class CommercialPortalGenericScenario extends TestBase {
 	/***
 	 * Verify that , a Quick Quote is generated for  Electricity Flow with Confirm with email
 	 ***/
+	public void CommercialPortal_TC_04() {
+		CP_TC_3 cp_tc_3 = new CP_TC_3(driver);
+		cp_tc_3.TC_03_TS_03();		
+	}
+	
+	@Test(priority = 2)
+	/***
+	 * Verify that , a Quick Quote is generated for  Electricity Flow with Confirm with email
+	 ***/
 	public void CommercialPortal_TC_05() {
 		CP_TC_5 CP_TC_5 = new CP_TC_5(driver);
 		CP_TC_5.TC_05_TS_05();		
@@ -95,7 +105,7 @@ public class CommercialPortalGenericScenario extends TestBase {
 		CP_TC_7.TC_07_TS_07();		
 	}
 	
-	@Test(priority = 1)
+	@Test(priority = 2)
 	/***
 	 * Verify that , a Quick Quote is generated for  Electricity Flow with Confirm with email
 	 ***/
@@ -104,13 +114,23 @@ public class CommercialPortalGenericScenario extends TestBase {
 		CP_TC_8.TC_08_TS_08();		
 	}
 	
-	@Test(priority = 1)
+	@Test(priority = 2)
 	/***
 	 * Verify that , a Quick Quote is generated for  Electricity Flow with Confirm with email
 	 ***/
 	public void CommercialPortal_TC_09() {
 		CP_TC_9 CP_TC_9 = new CP_TC_9(driver);
 		CP_TC_9.TC_09_TS_09();		
+	}
+	
+	@Test(priority = 1)
+	/***
+	 * Verify that , a Quick Quote is generated for  Electricity Flow with Confirm with email
+	 ***/
+	public void CommercialPortal_TC_10() {
+		CP_TC_10 CP_TC_10 = new CP_TC_10(driver);
+		CP_TC_10.TC_10_TS_10();		
+		CP_TC_10.TC_10_TS_10_phase2();
 	}
 		
 	

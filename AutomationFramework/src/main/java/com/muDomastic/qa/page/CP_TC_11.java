@@ -13,7 +13,7 @@ import org.openqa.selenium.support.PageFactory;
 import com.muDomastic.qa.base.TestBase;
 import com.muDomastic.qa.util.TestUtil;
 
-public class CP_TC_10  {
+public class CP_TC_11  {
 
 	// url initialization and launch browser as per the configuration
 	TestBase tb = new TestBase();
@@ -24,8 +24,8 @@ public class CP_TC_10  {
 	@FindBy(xpath = "//a[contains(text(),'Quick Quotes')]")
 	WebElement quickquotelabel;
 
-	@FindBy(xpath = "//input[@value='electricity']")
-	WebElement selectelectricity;
+	@FindBy(xpath = "//input[@value='gas']")
+	WebElement selectgas;
 
 	@FindBy(id="postcode")
 	WebElement postcode;
@@ -39,10 +39,10 @@ public class CP_TC_10  {
 	@FindBy(xpath="//Select[@name=\"businessType\"]")
 	WebElement selectbusinessType;
 
-	@FindBy(xpath="//div[@class=\"mpan-form-element display-mode\"]//span[@class=\"valid-icon\"]")
+	@FindBy(id="mprn")
 	WebElement mpanvalid;
 
-	@FindBy(xpath="//input[@name=\"contractEndDate0\"]//..//i")
+	@FindBy(xpath="//input[@name=\"contractEndDate1\"]//..//i")
 	WebElement contractenddate;
 
 	@FindBy(xpath="//ul[@class='uib-datepicker-popup dropdown-menu ng-scope']")
@@ -57,7 +57,7 @@ public class CP_TC_10  {
 	@FindBy(xpath="//span[contains(text(),'22')]")
 	WebElement selectDate;
 
-	@FindBy(id="usage0")
+	@FindBy(id="usage1")
 	WebElement kwhusage;
 
 	@FindBy(xpath="//button[contains(text(),'Get Quote')]")
@@ -160,7 +160,7 @@ public class CP_TC_10  {
 	WebElement verifyLive;
 
 	// initialize the Page objects
-	public CP_TC_10(WebDriver driver)
+	public CP_TC_11(WebDriver driver)
 	{
 		PageFactory.initElements(driver, this);
 	}
@@ -169,14 +169,14 @@ public class CP_TC_10  {
 	 * Verify that , a Quick Quote is generated for  Electricity Flow with Confirm with email
 	 ***/
 
-	public void TC_10_TS_10() {
+	public void TC_11_TS_11() {
 		try {
 
 			action.verifyElementPresent(quickquotelabel);	
 			action.clickWithjavascriptattempt(quickquotelabel);
 
-			action.verifyElementPresent(selectelectricity);	
-			action.clickWithjavascriptattempt(selectelectricity);
+			action.verifyElementPresent(selectgas);	
+			action.clickWithjavascriptattempt(selectgas);
 
 			action.verifyElementPresent(postcode);	
 			action.sendText(postcode,"AL109DF");
@@ -288,7 +288,7 @@ public class CP_TC_10  {
 		}
 	}
 
-	public void TC_10_TS_10_phase2()
+	public void TC_11_TS_11_phase2()
 	{
 		try {
 			//phase 2 started from here. 
@@ -305,7 +305,6 @@ public class CP_TC_10  {
 			{
 				action.wait(5);
 			}
-
 			supplierPortalVerification();
 		}
 		catch (Exception e) {
@@ -344,7 +343,7 @@ public class CP_TC_10  {
 
 			action.wait(5);
 
-			action.clickWithjavascriptattempt(verifyLive);
+			action.verifyElementPresent(verifyLive);
 		}
 		catch (Exception e) {
 			log.error(" :: Exception Occured, method name "+new Object(){}.getClass().getEnclosingMethod().getName()+" ::"+e.getMessage(), e);	

@@ -13,7 +13,7 @@ import org.openqa.selenium.support.PageFactory;
 import com.muDomastic.qa.base.TestBase;
 import com.muDomastic.qa.util.TestUtil;
 
-public class CP_TC_10  {
+public class CP_TC_13  {
 
 	// url initialization and launch browser as per the configuration
 	TestBase tb = new TestBase();
@@ -24,8 +24,8 @@ public class CP_TC_10  {
 	@FindBy(xpath = "//a[contains(text(),'Quick Quotes')]")
 	WebElement quickquotelabel;
 
-	@FindBy(xpath = "//input[@value='electricity']")
-	WebElement selectelectricity;
+	@FindBy(xpath = "//input[@value='gas']")
+	WebElement selectgas;
 
 	@FindBy(id="postcode")
 	WebElement postcode;
@@ -39,10 +39,10 @@ public class CP_TC_10  {
 	@FindBy(xpath="//Select[@name=\"businessType\"]")
 	WebElement selectbusinessType;
 
-	@FindBy(xpath="//div[@class=\"mpan-form-element display-mode\"]//span[@class=\"valid-icon\"]")
+	@FindBy(id="mprn")
 	WebElement mpanvalid;
 
-	@FindBy(xpath="//input[@name=\"contractEndDate0\"]//..//i")
+	@FindBy(xpath="//input[@name=\"contractEndDate1\"]//..//i")
 	WebElement contractenddate;
 
 	@FindBy(xpath="//ul[@class='uib-datepicker-popup dropdown-menu ng-scope']")
@@ -57,7 +57,7 @@ public class CP_TC_10  {
 	@FindBy(xpath="//span[contains(text(),'22')]")
 	WebElement selectDate;
 
-	@FindBy(id="usage0")
+	@FindBy(id="usage1")
 	WebElement kwhusage;
 
 	@FindBy(xpath="//button[contains(text(),'Get Quote')]")
@@ -147,20 +147,17 @@ public class CP_TC_10  {
 	@FindBy(xpath = "(//button[contains(text(),'Meter Details')])[1]")
 	WebElement meterDetails;
 
-	@FindBy(xpath = "//button[contains(text(),'Lock In')]")
-	WebElement lockIn;
+	@FindBy(xpath = "//button[contains(text(),'Reject Contract')]")
+	WebElement rejectContract;
 
-	@FindBy(xpath = "//button[contains(text(),'Yes')]")
-	WebElement confirmYes;
+	@FindBy(id="meterNotes")
+	WebElement meterNotes;
 
-	@FindBy(xpath = "//button[contains(text(),'Live')]")
-	WebElement buttonLive;
-
-	@FindBy(xpath = "//span[contains(text(),'Live')]")
-	WebElement verifyLive;
+	@FindBy(xpath = "//button[contains(text(),'Save')]")
+	WebElement confirmsSave;
 
 	// initialize the Page objects
-	public CP_TC_10(WebDriver driver)
+	public CP_TC_13(WebDriver driver)
 	{
 		PageFactory.initElements(driver, this);
 	}
@@ -169,14 +166,14 @@ public class CP_TC_10  {
 	 * Verify that , a Quick Quote is generated for  Electricity Flow with Confirm with email
 	 ***/
 
-	public void TC_10_TS_10() {
+	public void TC_13_TS_13() {
 		try {
 
 			action.verifyElementPresent(quickquotelabel);	
 			action.clickWithjavascriptattempt(quickquotelabel);
 
-			action.verifyElementPresent(selectelectricity);	
-			action.clickWithjavascriptattempt(selectelectricity);
+			action.verifyElementPresent(selectgas);	
+			action.clickWithjavascriptattempt(selectgas);
 
 			action.verifyElementPresent(postcode);	
 			action.sendText(postcode,"AL109DF");
@@ -288,7 +285,7 @@ public class CP_TC_10  {
 		}
 	}
 
-	public void TC_10_TS_10_phase2()
+	public void TC_13_TS_13_phase2()
 	{
 		try {
 			//phase 2 started from here. 
@@ -299,13 +296,12 @@ public class CP_TC_10  {
 			action.wait(6);
 			String exePath = System.getProperty("user.dir")+"\\driver\\upload.exe";
 			Runtime.getRuntime().exec(exePath);
-			action.wait(2);
+			action.wait(5);
 
 			if(action.verifyElementPresent(nextStep))
 			{
 				action.wait(5);
 			}
-
 			supplierPortalVerification();
 		}
 		catch (Exception e) {
@@ -334,17 +330,13 @@ public class CP_TC_10  {
 
 			action.clickWithjavascriptattempt(meterDetails);
 
-			action.clickWithjavascriptattempt(lockIn);
+			action.clickWithjavascriptattempt(rejectContract);
 
-			action.clickWithjavascriptattempt(confirmYes);
-
-			action.clickWithjavascriptattempt(buttonLive);
-
-			action.clickWithjavascriptattempt(confirmYes);
-
-			action.wait(5);
-
-			action.clickWithjavascriptattempt(verifyLive);
+			action.verifyElementPresent(meterNotes);
+			
+			action.sendText(meterNotes, "automation tested scenario");
+			
+			action.clickWithjavascriptattempt(confirmsSave);
 		}
 		catch (Exception e) {
 			log.error(" :: Exception Occured, method name "+new Object(){}.getClass().getEnclosingMethod().getName()+" ::"+e.getMessage(), e);	

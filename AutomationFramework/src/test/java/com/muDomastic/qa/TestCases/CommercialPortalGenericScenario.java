@@ -8,8 +8,12 @@ import com.muDomastic.qa.base.TestBase;
 import com.muDomastic.qa.page.CP_Login_Page;
 import com.muDomastic.qa.page.CP_TC_1;
 import com.muDomastic.qa.page.CP_TC_10;
+import com.muDomastic.qa.page.CP_TC_11;
+import com.muDomastic.qa.page.CP_TC_12;
+import com.muDomastic.qa.page.CP_TC_13;
 import com.muDomastic.qa.page.CP_TC_2;
 import com.muDomastic.qa.page.CP_TC_3;
+import com.muDomastic.qa.page.CP_TC_4;
 import com.muDomastic.qa.page.CP_TC_5;
 import com.muDomastic.qa.page.CP_TC_6;
 import com.muDomastic.qa.page.CP_TC_7;
@@ -74,8 +78,8 @@ public class CommercialPortalGenericScenario extends TestBase {
 	 * Verify that, a Quick Quote is generated for Electricity Flow with Confirm with email
 	 ***/
 	public void CommercialPortal_TC_04() {
-		CP_TC_3 cp_tc_3 = new CP_TC_3(driver);
-		cp_tc_3.TC_03_TS_03();		
+		CP_TC_4 cp_tc_4 = new CP_TC_4(driver);
+		cp_tc_4.TC_04_TS_04();		
 	}
 	
 	@Test(priority = 5)
@@ -123,7 +127,7 @@ public class CommercialPortalGenericScenario extends TestBase {
 		CP_TC_9.TC_09_TS_09();		
 	}
 	
-	@Test(priority = 10)
+	@Test(priority = 1)
 	/***
 	 * Verify that, a Quick Quote is generated for Electricity Flow with Confirm with email
 	 ***/
@@ -131,14 +135,45 @@ public class CommercialPortalGenericScenario extends TestBase {
 		CP_TC_10 CP_TC_10 = new CP_TC_10(driver);
 		CP_TC_10.TC_10_TS_10();		
 		CP_TC_10.TC_10_TS_10_phase2();
+	}		
+	
+	@Test(priority = 1)
+	/***
+	 * Verify that, a Quick Quote is generated for Electricity Flow with Confirm with email
+	 ***/
+	public void CommercialPortal_TC_11() {
+		CP_TC_11 CP_TC_11 = new CP_TC_11(driver);
+		CP_TC_11.TC_11_TS_11();		
+		CP_TC_11.TC_11_TS_11_phase2();
 	}
 	
+	@Test(priority = 1)
+	/***
+	 * Verify that, a Quick Quote is generated for Electricity Flow with Confirm with email
+	 ***/
+	public void CommercialPortal_TC_12() {
+		CP_TC_12 CP_TC_12 = new CP_TC_12(driver);
+		CP_TC_12.TC_12_TS_12();		
+		CP_TC_12.TC_12_TS_12_phase2();
+	}
+	
+	
+	@Test(priority = 1)
+	/***
+	 * Verify that, a Quick Quote is generated for Electricity Flow with Confirm with email
+	 ***/
+	public void CommercialPortal_TC_13() {
+		CP_TC_13 CP_TC_13 = new CP_TC_13(driver);
+		CP_TC_13.TC_13_TS_13();		
+		CP_TC_13.TC_13_TS_13_phase2();
+	}
+		
 	@AfterMethod
 	public void driverClose() 
-	{
-		try {
-			driver.close();
-			driver.quit();
+	{	
+		try {	
+			driver.close();		
+			driver.quit();	
 			Thread.sleep(10000);
 			if (!driver.toString().toLowerCase().contains("null"))
 			{

@@ -1,6 +1,7 @@
 package com.muDomastic.qa.page;
 
 import java.util.List;
+
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -17,14 +18,135 @@ public class CP_TC_4  {
 	TestUtil action = new TestUtil();
 
 	// define all the xpaths here	
-	@FindBy(xpath = "//a[contains(text(),'Quick Quotes')]")
-	WebElement quickquotelabel;
+	@FindBy(xpath = "//a[contains(text(),'My Customers')]")
+	WebElement myCustomer;
+
+	@FindBy(xpath = "//span[contains(text(),'Add New Customer')]")
+	WebElement addNewCustomer;
+
+
+	@FindBy(id="companyName")
+	WebElement companyName;
+
+	@FindBy(id="registeredAddressPostcode")
+	WebElement registeredAddressPostcode;
+
+	@FindBy(id="registeredAddressCity")
+	WebElement registeredAddressCity;
+
+	@FindBy(id="registeredAddressCounty")
+	WebElement registeredAddressCounty;
+
+	@FindBy(id="paperBillsSendTo")
+	WebElement paperBillsSendToHeadoffice;
+
+	@FindBy(xpath="//select[@name='companyType']")
+	WebElement companyType;
+
+	@FindBy(id="companyRegistrationNumber")
+	WebElement companyRegistrationNumber;
+
+	@FindBy(xpath="//select[@name='sicCode']")
+	WebElement sicCode;
+
+	@FindBy(xpath="//select[@name='vatRate']")
+	WebElement  vatRate;
+
+	@FindBy(xpath="//button[contains(text(),'Save & Next')]")
+	WebElement saveNNext;
+
+	@FindBy(xpath="//button[@class='btn btn-primary']")
+	WebElement addprimarycontact;
+
+	@FindBy(xpath="//select[@name='title']")
+	WebElement  title;
+
+	@FindBy(id="firstName")
+	WebElement companyContactFirstName;
+
+	@FindBy(id="lastName")
+	WebElement companyContactLastName;
+
+	@FindBy(xpath="//input[@name='jobTitle']")
+	WebElement companyContactJobTitle;
+
+	@FindBy(id="email")
+	WebElement companyContactEmail;
+
+	@FindBy(id="landline")
+	WebElement companyContactLandline;
+
+	@FindBy(xpath="//button[@type=\"submit\"]")
+	WebElement savebutton;
+
+	@FindBy(xpath="//button[contains(text(),'Next')]")
+	WebElement nextbutton;
+
+	@FindBy(id="addElectricSite")
+	WebElement addElectricSite;
+
+	@FindBy(id="numberOfMeters")
+	WebElement numberOfMeters1;
+
+	@FindBy(xpath="//span[contains(text(),'Search')]")
+	WebElement searchBtn;
+
+	@FindBy(xpath="//tr[@class=\"ng-scope\"]//td[3]")
+	List<WebElement> listAddress;
+
+	@FindBy(xpath="(//button[contains(text(),'Include')])[1]")
+	WebElement includeMeter;
+
+	@FindBy(xpath="//input[@name=\"currentContractEndDate\"]//..//i")
+	WebElement currentContractEndDate;
+
+	@FindBy(xpath="//ul[@class='uib-datepicker-popup dropdown-menu ng-scope']")
+	WebElement calendartable;
+
+	@FindBy(xpath="//i[@class=\"glyphicon glyphicon-chevron-right\"]")
+	WebElement nextmonth;
+
+	@FindBy(xpath="//button[@class=\"btn btn-default btn-sm uib-title\"]//strong")
+	WebElement calendarTitle;
+
+	@FindBy(xpath="//span[contains(text(),'22')]")
+	WebElement selectDate;
+
+	@FindBy(id="usage")
+	WebElement kwhusage;
+
+	@FindBy(xpath="//button[contains(text(),'Quote')]")
+	WebElement QuoteButton;
+
+
+	@FindBy(xpath="(//button[contains(text(),'Proceed')])[2]")
+	WebElement ProceedButton;
+
+	@FindBy(id="postcode")
+	WebElement postcode;
+
+	@FindBy(xpath="//button[contains(text(),'Edit Site Payment Details')]")
+	WebElement editsitebutton;
+
+	@FindBy(xpath = "//a[@class=\"btn btn-passive\"][contains(text(),'Skip')]")
+	WebElement paymentskipbutton;
+
+	@FindBy(id="t&c")
+	WebElement tc;
+
+	@FindBy(xpath="//label[@for=\"noOfEmployee2\"]")
+	WebElement tc_2;
+
+
+
+
+
+
 
 	@FindBy(xpath = "//input[@value='dual']")
 	WebElement selectdualenergy;
 
-	@FindBy(id="postcode")
-	WebElement postcode;
+
 
 	@FindBy(xpath="//span[@class=\"glyphicon glyphicon-search\"]")
 	WebElement postcodesearch;
@@ -38,27 +160,13 @@ public class CP_TC_4  {
 	@FindBy(xpath="//div[@class=\"mpan-form-element display-mode\"]//span[@class=\"valid-icon\"]")
 	WebElement mpanvalid;
 
-	@FindBy(xpath="//input[@name=\"contractEndDate0\"]//..//i")
-	WebElement contractenddate;
+	@FindBy(xpath="//input[@name=\"currentContractEndDate\"]//..//i")
+	WebElement contractEndDate1;
 
 	@FindBy(xpath="//input[@name=\"contractEndDate1\"]//..//i")
 	WebElement contractenddategas;
-	
-	@FindBy(xpath="//ul[@class='uib-datepicker-popup dropdown-menu ng-scope']")
-	WebElement calendartable;
 
-	@FindBy(xpath="//i[@class=\"glyphicon glyphicon-chevron-right\"]")
-	WebElement nextmonth;
 
-	@FindBy(xpath="//button[@class=\"btn btn-default btn-sm uib-title\"]//strong")
-	WebElement calendarTitle;
-
-	@FindBy(xpath="//span[contains(text(),'22')]")
-	WebElement selectDate;
-
-	@FindBy(id="usage0")
-	WebElement kwhusage;
-	
 	@FindBy(id="usage1")
 	WebElement kwhusagegas;
 
@@ -74,20 +182,6 @@ public class CP_TC_4  {
 	@FindBy(xpath="//Select[@name=\"companyContactTitle\"]")
 	WebElement companyContactTitle;
 
-	@FindBy(id="companyContactFirstName")
-	WebElement companyContactFirstName;
-
-	@FindBy(id="companyContactLastName")
-	WebElement companyContactLastName;
-
-	@FindBy(id="companyContactJobTitle")
-	WebElement companyContactJobTitle;
-
-	@FindBy(id="companyContactEmail")
-	WebElement companyContactEmail;
-
-	@FindBy(id="companyContactLandline")
-	WebElement companyContactLandline;
 
 	@FindBy(id="companyContactMobile")
 	WebElement companyContactMobile;
@@ -98,21 +192,10 @@ public class CP_TC_4  {
 	@FindBy(id="isAuthoritySignDirectDebit")
 	WebElement isAuthoritySignDirectDebit;
 
-	@FindBy(xpath="//button[contains(text(),'Next')]")
-	WebElement nextbutton;
 
-	@FindBy(xpath="//button[contains(text(),'Edit Site Payment Details')]")
-	WebElement editsitebutton;
 
-	@FindBy(xpath = "//a[@class=\"btn btn-passive\"][contains(text(),'Skip')]")
-	WebElement paymentskipbutton;
 
-	@FindBy(id="t&c")
-	WebElement tc;
 
-	@FindBy(xpath="//label[@for=\"noOfEmployee2\"]")
-	WebElement tc_2;
-	
 	@FindBy(xpath="//button[contains(text(),'Skip')]")
 	WebElement paymentskipbutton2;
 
@@ -127,19 +210,19 @@ public class CP_TC_4  {
 
 	@FindBy(xpath="(//button[contains(text(),'')])")
 	List<WebElement> finalbuttons;
-	
+
 	@FindBy(xpath="//button[contains(text(),'Choose')]")
 	WebElement choosebutton;
-	
+
 	@FindBy(xpath="(//button[contains(text(),'Proceed')])[1]")
 	WebElement proceedbutton;
-	
+
 	@FindBy(xpath="(//span[contains(text(),'1 of 2')])[2]")
 	WebElement submit1of2;
-	
+
 	@FindBy(xpath="(//span[contains(text(),'2 of 2')])[2]")
 	WebElement submit2of2;
-	
+
 
 	// initialize the Page objects
 	public CP_TC_4(WebDriver driver)
@@ -151,29 +234,83 @@ public class CP_TC_4  {
 	 * Verify that , a Quick Quote is generated for  Electricity Flow with Confirm with email
 	 ***/
 
-	public void TC_03_TS_03() {
+	public void TC_04_TS_04() {
 		try {
 
-			action.verifyElementPresent(quickquotelabel);	
-			action.clickWithjavascriptattempt(quickquotelabel);
+			action.clickWithjavascriptattempt(myCustomer);
 
-			action.verifyElementPresent(selectdualenergy);	
-			action.clickWithjavascriptattempt(selectdualenergy);
+			action.clickWithjavascriptattempt(addNewCustomer);
 
-			action.verifyElementPresent(postcode);	
-			action.sendText(postcode,"AL109DF");
-			action.clickWithjavascriptattempt(postcodesearch);
+			action.sendText(companyName, "my utility");
 
-			action.verifyElementPresent(selectaddress);
-			action.selectDropDownByValue(selectaddress, "20");
+			action.sendText(registeredAddressPostcode, "AL109DF");
 
-			action.verifyElementPresent(selectbusinessType);
-			action.selectDropDownByValue(selectbusinessType, "7");
+			action.sendText(registeredAddressCity, "Hatfield");
 
-			action.verifyElementPresent(mpanvalid);
+			action.sendText(registeredAddressCounty, "Hertfordshire");
 
-			action.verifyElementPresent(contractenddate);
-			action.clickWithjavascriptattempt(contractenddate);				
+			action.clickWithjavascriptattempt(paperBillsSendToHeadoffice);
+
+			action.selectDropDownByVisibleText(companyType, "Private Limited Companies (Ltd/Limited/Cyf)");
+
+			action.sendText(companyRegistrationNumber, "23101993");
+
+			action.selectDropDownByVisibleText(sicCode, "Education");
+
+			action.selectDropDownByVisibleText(vatRate, "5%");
+
+			action.clickWithjavascriptattempt(saveNNext);
+
+			action.clickWithjavascriptattempt(addprimarycontact);
+
+			action.selectDropDownByVisibleText(title, "Mr");
+
+			action.sendText(companyContactFirstName, "Luv");
+
+			action.sendText(companyContactLastName, "Mendiratta");
+
+			action.sendText(companyContactJobTitle, "SDET");
+
+			action.sendText(companyContactEmail, "xyz@gmail.com");
+
+			action.sendText(companyContactLandline, "02034680431");
+
+			action.clickWithjavascriptattempt(savebutton);
+
+			action.clickWithjavascriptattempt(nextbutton);
+
+			action.clickWithjavascriptattempt(addElectricSite);
+
+			action.clickWithjavascriptattempt(numberOfMeters1);
+
+			action.clickWithjavascriptattempt(nextbutton);
+
+			action.sendText(postcode, "HA2 7SA");
+
+			action.clickWithjavascriptattempt(searchBtn);
+			
+			action.wait(10);
+			
+			List<WebElement> listaddresses =  listAddress;
+			int selectHack = 1;
+			for (WebElement ele : listaddresses)
+			{
+				String udhjana = ele.getText();
+				
+				if(!udhjana.isEmpty())
+				{
+					String xpath = "(//tr[@class=\"ng-scope\"]//td[4])["+String.valueOf(selectHack)+"]";
+					action.clickWithAttemptActions(action.findelement(xpath));
+					break ;
+				}			
+				selectHack++;
+			}
+
+			action.clickWithjavascriptattempt(saveNNext);
+			action.clickWithjavascriptattempt(includeMeter);
+			action.verifyElementPresent(currentContractEndDate);
+			action.clickWithjavascriptattempt(currentContractEndDate);		
+
 			action.verifyElementPresent(calendartable);
 			System.out.println(calendarTitle.getText().toString());
 			while(!calendarTitle.getText().toString().equalsIgnoreCase("April 2022"))
@@ -184,82 +321,24 @@ public class CP_TC_4  {
 			action.clickWithjavascriptattempt(selectDate);			
 
 			action.verifyElementPresent(kwhusage);	
+
 			action.sendText(kwhusage,"222");
-			
-			//for gas......................
-			action.verifyElementPresent(contractenddategas);
-			action.clickWithjavascriptattempt(contractenddategas);				
-			action.verifyElementPresent(calendartable);
-			System.out.println(calendarTitle.getText().toString());
-			while(!calendarTitle.getText().toString().equalsIgnoreCase("April 2022"))
-			{						
-				System.out.println(calendarTitle.getText().toString());
-				action.clickWithjavascriptattempt(nextmonth);
-			}
-			action.clickWithjavascriptattempt(selectDate);			
 
-			action.verifyElementPresent(kwhusagegas);	
-			action.sendText(kwhusagegas,"222");
-			//...................
+			action.clickWithjavascriptattempt(savebutton);
 
-			action.verifyElementPresent(getquote);	
-			action.clickWithjavascriptattempt(getquote);
+			action.clickWithjavascriptattempt(QuoteButton);
 
-			action.verifyElementPresent(bestdealproceed);	
-			action.clickWithjavascriptattempt(bestdealproceed);
+			action.clickWithjavascriptattempt(ProceedButton);
 
-			action.verifyElementPresent(choosebutton);	
-			action.clickWithjavascriptattempt(choosebutton);
-
-			action.verifyElementPresent(proceedbutton);	
-			action.clickWithjavascriptattempt(proceedbutton);	
-			
-			action.verifyElementPresent(proceedbutton);	
-			action.clickWithjavascriptattempt(proceedbutton);	
-				
-			action.verifyElementPresent(registrationnumber);	
-			action.sendText(registrationnumber,"100");
-
-			System.out.println(action.verifyElementPresent(companyContactTitle));
-			action.selectDropDownByValue(companyContactTitle, "Mr");
-
-			action.verifyElementPresent(companyContactFirstName);	
-			action.sendText(companyContactFirstName,"luv");
-
-			action.verifyElementPresent(companyContactLastName);	
-			action.sendText(companyContactLastName,"mendiratta");
-
-			action.verifyElementPresent(companyContactJobTitle);	
-			action.sendText(companyContactJobTitle,"sdet");
-
-			action.verifyElementPresent(companyContactEmail);	
-			action.sendText(companyContactEmail,"xyz@gmail.com");
-
-			action.verifyElementPresent(companyContactLandline);	
-			action.sendText(companyContactLandline,"12312312312");
-
-			action.verifyElementPresent(companyContactMobile);	
-			action.sendText(companyContactMobile,"07467123123");
-
-			action.verifyElementPresent(isAuthoritySignContract);	
-			action.clickWithjavascriptattempt(isAuthoritySignContract);
-
-			action.verifyElementPresent(isAuthoritySignDirectDebit);	
-			action.clickWithjavascriptattempt(isAuthoritySignDirectDebit);
-
-			action.clickWithjavascriptattempt(nextbutton);
-
-			action.verifyElementPresent(paymentskipbutton);	
-			action.clickWithjavascriptattempt(paymentskipbutton);
-
-			action.verifyElementPresent(editsitebutton);	
 			action.clickWithjavascriptattempt(editsitebutton);
 
-			action.verifyElementPresent(paymentskipbutton2);	
 			action.clickWithjavascriptattempt(paymentskipbutton2);
 
 			action.verifyElementPresent(tc);	
 			action.clickWithjavascriptattempt(tc);
+
+			action.verifyElementPresent(tc_2);	
+			action.clickWithjavascriptattempt(tc_2);
 
 			action.verifyElementPresent(chooseAction);
 			action.selectDropDownByValue(chooseAction, "1");
@@ -273,38 +352,19 @@ public class CP_TC_4  {
 					action.selectDropDownByVisibleText(chooseContactsOPTION, udhjana);
 				}				
 			}
-			
 
-			action.verifyElementPresent(submit1of2);	
-			action.clickWithjavascriptattempt(submit1of2);
-
-			action.verifyElementPresent(tc_2);	
-			action.clickWithjavascriptattempt(tc_2);
-			
-			action.verifyElementPresent(tc);	
-			action.clickWithjavascriptattempt(tc);
-
-			action.verifyElementPresent(chooseAction);
-			action.selectDropDownByValue(chooseAction, "1");
-
-			List<WebElement> listelement =  chooseContactsOPTIONs;
-			for (WebElement ele : listelement)
+			List<WebElement> listbuttons =  finalbuttons;
+			for (WebElement ele : listbuttons)
 			{
 				String udhjana = ele.getText();
-				if(udhjana.contains("luv"))
+				if(udhjana.contains("DocuSign"))
 				{
-					action.selectDropDownByVisibleText(chooseContactsOPTION, udhjana);
+					ele.click();
+					break;
 				}				
-			}
-			
-
-			action.verifyElementPresent(submit2of2);	
-			action.clickWithjavascriptattempt(submit2of2);
-			
-			action.wait(10);
+			}	
 		}
-	
-		
+
 		catch (Exception e) {
 			log.error(" :: Exception Occured, method name "+new Object(){}.getClass().getEnclosingMethod().getName()+" ::"+e.getMessage(), e);
 		}

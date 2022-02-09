@@ -9,11 +9,15 @@
 	<test name="ComercialPortalGenericScenario">
 		<classes>
 			<class
-				name="com.muDomastic.qa.TestCases.CommercialPortalGenericScenario"></class>
+				name="com.muDomastic.qa.TestCases.CommercialPortalGenericScenario">
+				<methods>
+					<include name="CommercialPortal_TC_04" />
+				</methods>
+			</class>
 		</classes>
 
-<!-- 		<packages> -->
-<!-- 			<package name="com.muDomastic.qa.TestCases" /> -->
-<!-- 		</packages> -->
+		<!-- <packages> -->
+		<!-- <package name="com.muDomastic.qa.TestCases" /> -->
+		<!-- </packages> -->
 	</test>
 </suite>

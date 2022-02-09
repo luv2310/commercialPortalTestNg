@@ -134,7 +134,15 @@ public class TestUtil extends TestBase {
 			log.error(" :: Exception Occured in class TestUtils Page, method name "+new Object(){}.getClass().getEnclosingMethod().getName()+" ::"+e.getMessage(), e);
 		}
 	}
-
+	public void  openUrl(String url) 
+	{		
+		try {
+			driver.get(url);
+		}
+		catch (Exception e) {
+			log.error(" :: Exception Occured in class TestUtils Page, method name "+new Object(){}.getClass().getEnclosingMethod().getName()+" ::"+e.getMessage(), e);
+		}
+	}
 	public void wait(int seconds)
 	{		
 		try {
@@ -451,5 +459,15 @@ public class TestUtil extends TestBase {
 			log.error(" :: Exception Occured in class TestUtils Page, method name "+new Object(){}.getClass().getEnclosingMethod().getName()+" ::"+e.getMessage(), e);
 		}
 		return filteredList;
+	}
+
+	public WebElement findelement(String  xpath) {
+		WebElement result = null ;
+		try {	
+			result = driver.findElement(By.xpath(xpath));
+		}catch (Exception e) {
+			log.error(" :: Exception Occured in class TestUtils Page, method name "+new Object(){}.getClass().getEnclosingMethod().getName()+" ::"+e.getMessage(), e);
+		}
+		return result;
 	}
 }
